@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Watch = () => {
     const [steps, setSteps] = useState(0)
@@ -7,6 +7,9 @@ const Watch = () => {
         const newStepsCount = steps + 1;
         setSteps(newStepsCount);
     }
+     useEffect (()=>{
+        console.log("Hellow")
+     },[steps])
 
     return (
         <div>
